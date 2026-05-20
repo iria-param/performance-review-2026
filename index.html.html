@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Journey — Rajath Singh R</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<style>
+:root {
+  --paper: #f4efe2;
+  --paper-2: #ebe3cc;
+  --ink: #1f1b16;
+  --ink-soft: #4a443c;
+  --ink-faded: #8c8270;
+  --red: #b83a2c;
+  --red-soft: #d4685e;
+  --blue: #1f4068;
+  --blue-soft: #5b7ba1;
+  --yellow: #f2d680;
+  --sticky: #fff4b3;
+  --green: #5c8a4f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  line-height: 1.65;
+  overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(31, 64, 104, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 64, 104, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 80% 10%, rgba(184, 58, 44, 0.04), transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(31, 64, 104, 0.04), transparent 50%);
+  background-size: 28px 28px, 28px 28px, 100% 100%, 100% 100%;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.1 0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0.04 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.55;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+main { position: relative; z-index: 2; }
+
+.display, h1, h2, h3, .num-big {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+}
+
+p { color: var(--ink-soft); font-weight: 350; }
+p strong { color: var(--ink); font-weight: 600; }
+
+.mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78em; letter-spacing: 0.03em; }
+
+.kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.annotation {
+  font-family: 'Caveat', cursive;
+  color: var(--red);
+  font-size: 1.15em;
+  font-weight: 500;
+}
+
+.scribble {
+  position: relative;
+  display: inline-block;
+}
+.scribble::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: -4px;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 Q 12 0 24 4 T 48 4 T 72 4 T 100 4' stroke='%23B83A2C' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat;
+  background-size: 100% 100%;
+}
+
+.wrap { max-width: 1280px; margin: 0 auto; padding: 0 6vw; }
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: clamp(56px, 7vw, 96px);
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 350;
+  color: var(--ink-faded);
+  font-size: 17px;
+  margin-bottom: 60px;
+  max-width: 640px;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  min-height: 100vh;
+  padding: 80px 6vw 60px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+
+.hero-left { position: relative; }
+
+.hero h1 {
+  font-size: clamp(80px, 16vw, 220px);
+  margin: 16px 0 24px;
+}
+.hero h1 .month {
+  display: inline-block;
+  position: relative;
+  font-size: 0.55em;
+}
+.hero h1 .month::before {
+  content: "";
+  position: absolute;
+  left: -8px; right: -8px;
+  top: -6px; bottom: -6px;
+  border: 3px solid var(--red);
+  border-radius: 50% 8px 50% 12px / 12px 50% 8px 50%;
+  transform: rotate(-2deg);
+  z-index: -1;
+}
+
+.hero-sub {
+  font-size: 22px;
+  max-width: 560px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+.hero-meta {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.meta-item {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+.meta-label {
+  color: var(--ink-faded);
+  margin-right: 12px;
+  display: inline-block;
+  width: 90px;
+  text-transform: uppercase;
+}
+
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  font-family: 'Caveat', cursive;
+  color: var(--red);
+  font-size: 22px;
+  transform: rotate(-8deg);
+  text-align: right;
+}
+
+.tape {
+  position: absolute;
+  background: rgba(242, 214, 128, 0.7);
+  padding: 4px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ink);
+  transform: rotate(-3deg);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+}
+
+.stick { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.stick-red { stroke: var(--red); }
+.stick-blue { stroke: var(--blue); }
+.stick-fill { fill: var(--paper); }
+
+svg.figure { display: block; width: 100%; height: auto; }
+
+/* ---------- NUMBERS ---------- */
+.numbers { padding: 80px 0 120px; background: rgba(235, 227, 204, 0.4); border-top: 2px dashed var(--ink-faded); border-bottom: 2px dashed var(--ink-faded); }
+
+.numbers .note {
+  font-family: 'Caveat', cursive;
+  color: var(--red);
+  font-size: 0.4em;
+  font-weight: 500;
+}
+
+.num-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 36px;
+  margin-top: 20px;
+}
+
+.num {
+  padding: 24px 8px;
+  border-top: 2px solid var(--ink);
+  position: relative;
+}
+.num::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 2' preserveAspectRatio='none'%3E%3Cpath d='M0 1 L100 1' stroke='%231F1B16' stroke-width='1' stroke-dasharray='3 3'/%3E%3C/svg%3E") no-repeat;
+  background-size: 100% 100%;
+}
+.num-big {
+  font-size: 68px;
+  line-height: 0.9;
+  color: var(--red);
+}
+.num-lbl {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--ink);
+  margin-top: 6px;
+}
+.num-annot {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faded);
+  margin-top: 6px;
+  line-height: 1.4;
+}
+
+/* ---------- CHAPTERS ---------- */
+.chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 80px 0;
+  position: relative;
+}
+.chapter.reverse { direction: rtl; }
+.chapter.reverse > * { direction: ltr; }
+
+.chapter-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.chapter-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faded);
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.chapter h2 {
+  font-size: clamp(48px, 6vw, 84px);
+  margin-bottom: 24px;
+}
+
+.chapter-body p {
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.chapter-figure {
+  position: relative;
+  padding: 20px;
+}
+
+.callout-quote {
+  background: var(--sticky);
+  padding: 18px 22px;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+  color: var(--ink);
+  margin: 20px 0;
+  transform: rotate(-1deg);
+  box-shadow: 2px 4px 12px rgba(0,0,0,0.08);
+  line-height: 1.25;
+  border-left: 4px solid var(--red);
+  font-weight: 500;
+}
+
+.tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  text-transform: lowercase;
+}
+.tag.red { border-color: var(--red); color: var(--red); }
+.tag.blue { border-color: var(--blue); color: var(--blue); }
+
+.divider {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--ink-faded);
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  letter-spacing: 0.8em;
+}
+
+/* ---------- HATS STRIP ---------- */
+.hats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin: 32px 0;
+  padding: 24px 0;
+  border-top: 1.5px dashed var(--ink-faded);
+  border-bottom: 1.5px dashed var(--ink-faded);
+}
+.hat-step {
+  text-align: center;
+  position: relative;
+}
+.hat-step:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  font-family: 'Caveat', cursive;
+  color: var(--red);
+  font-size: 28px;
+  transform: translateY(-50%);
+}
+.hat-step svg { width: 60%; height: auto; margin: 0 auto; display: block; }
+.hat-label {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-top: 4px;
+}
+.hat-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ---------- BMSCE CASCADE ---------- */
+.cascade-wrap {
+  padding: 80px 0;
+  background: rgba(235, 227, 204, 0.4);
+  border-top: 2px dashed var(--ink-faded);
+  border-bottom: 2px dashed var(--ink-faded);
+}
+.cascade {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: 50px;
+  align-items: stretch;
+}
+.cascade-step {
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.cascade-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  top: 50%;
+  width: 30px;
+  height: 22px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 22'%3E%3Cpath d='M0 11 L25 11 M18 4 L25 11 L18 18' stroke='%23B83A2C' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center;
+  z-index: 2;
+  transform: translateY(-50%);
+}
+.cascade-stage {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  text-transform: uppercase;
+}
+.cascade-title {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 8px 0 12px;
+  line-height: 1;
+}
+.cascade-body {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.cascade svg { width: 60px; height: 60px; margin: 8px auto; display: block; }
+
+/* ---------- VISITS STRIP ---------- */
+.visits {
+  padding: 80px 0;
+}
+.visits-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 40px;
+}
+.visit-card {
+  border: 1.5px solid var(--ink);
+  padding: 20px 16px;
+  position: relative;
+  background: var(--paper);
+}
+.visit-card .ribbon {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: var(--paper);
+  padding: 0 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: var(--red);
+  letter-spacing: 0.15em;
+}
+.visit-name {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+.visit-take {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+
+/* ---------- MULTI-REACH ---------- */
+.reach {
+  padding: 100px 0;
+}
+.reach-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 40px;
+}
+.reach-item {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 40px;
+  padding: 28px 0;
+  border-bottom: 1.5px dashed var(--ink-faded);
+  align-items: center;
+}
+.reach-name {
+  font-family: 'Caveat', cursive;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1;
+}
+.reach-arrow {
+  font-family: 'Caveat', cursive;
+  color: var(--red);
+  font-size: 24px;
+  display: inline-block;
+  margin: 0 8px;
+}
+.reach-out { color: var(--ink-soft); font-size: 17px; }
+
+/* ---------- CRITERIA ---------- */
+.criteria { padding: 120px 0; background: rgba(235, 227, 204, 0.5); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.crit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.crit-card {
+  background: var(--paper);
+  padding: 32px;
+  border: 2px solid var(--ink);
+  position: relative;
+}
+.crit-card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 2px solid var(--ink);
+  z-index: -1;
+  opacity: 0.2;
+  transform: rotate(-1deg);
+}
+.crit-card:nth-child(2)::before { transform: rotate(1deg); }
+.crit-card:nth-child(3)::before { transform: rotate(-0.5deg); }
+.crit-card h3 {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.crit-card ul { list-style: none; }
+.crit-card li {
+  font-size: 15px;
+  color: var(--ink-soft);
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.crit-card li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+}
+
+/* ---------- FUTURE ---------- */
+.future {
+  padding: 100px 0;
+}
+.future-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.future-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 280px;
+  gap: 24px;
+  align-items: start;
+  padding: 24px;
+  border: 1.5px solid var(--ink);
+  position: relative;
+  background: var(--paper);
+}
+.future-num {
+  font-family: 'Caveat', cursive;
+  font-size: 64px;
+  color: var(--red);
+  line-height: 0.9;
+  font-weight: 700;
+}
+.future-title {
+  font-family: 'Caveat', cursive;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.future-body {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.future-thread {
+  font-family: 'Caveat', cursive;
+  font-size: 18px;
+  color: var(--red);
+  line-height: 1.3;
+  padding-left: 16px;
+  border-left: 2px solid var(--red);
+  font-style: italic;
+}
+
+/* ---------- PHASE BLOCKS (Math in Motion four-move journey) ---------- */
+.phase {
+  margin: 18px 0;
+  padding: 12px 0 12px 18px;
+  border-left: 3px solid var(--red);
+  position: relative;
+}
+.phase-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.phase p {
+  font-size: 16px !important;
+  margin: 0 !important;
+  line-height: 1.55;
+}
+
+/* ---------- CLOSED PROJECTS STRIP ---------- */
+.closed-wrap {
+  margin: 60px 0 20px;
+  padding: 36px 28px 28px;
+  background: rgba(31, 27, 22, 0.04);
+  border: 1.5px dashed var(--ink-faded);
+  position: relative;
+}
+.closed-label {
+  position: absolute;
+  top: -10px;
+  left: 24px;
+  background: var(--paper);
+  padding: 0 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+}
+.closed-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.closed-card {
+  text-align: center;
+  padding: 12px;
+}
+.closed-card svg { width: 70px; height: 70px; margin: 0 auto 6px; display: block; opacity: 0.55; }
+.closed-name {
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  padding: 0 4px;
+}
+.closed-name::after {
+  content: "";
+  position: absolute;
+  left: -4px; right: -4px;
+  top: 52%;
+  height: 2px;
+  background: var(--red);
+  transform: rotate(-3deg);
+}
+.closed-reason {
+  font-size: 13px;
+  color: var(--ink-faded);
+  margin-top: 12px;
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* ---------- SESSIONS STRIP ---------- */
+.sessions-wrap {
+  padding: 80px 0;
+  background: rgba(235, 227, 204, 0.4);
+  border-top: 2px dashed var(--ink-faded);
+  border-bottom: 2px dashed var(--ink-faded);
+}
+
+@media (max-width: 980px) {
+  .closed-grid { grid-template-columns: 1fr; gap: 28px; }
+  .phase p { font-size: 15px !important; }
+}
+
+/* ---------- PAGE FLIP + CRUMPLE ANIMATION ---------- */
+html { perspective: 1800px; perspective-origin: 50% 35%; }
+
+.flip-page {
+  transform-origin: 50% 0%;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform, opacity, filter;
+  transition:
+    transform 1.15s cubic-bezier(0.4, 0.05, 0.2, 1),
+    opacity 0.9s ease,
+    filter 0.9s ease;
+  position: relative;
+}
+
+/* Initial state: tilted away, slightly blurred, semi-transparent */
+.flip-page:not(.is-flipped) {
+  transform:
+    rotate3d(1, 0.15, 0, -55deg)
+    translateZ(-90px)
+    translateY(-30px)
+    skewX(-1.5deg)
+    skewY(0.4deg);
+  opacity: 0;
+  filter: blur(3px) brightness(0.82) contrast(1.05);
+}
+
+.flip-page.is-flipped {
+  transform: rotateX(0) translateZ(0) translateY(0);
+  opacity: 1;
+  filter: blur(0) brightness(1) contrast(1);
+}
+
+/* Crumpled paper texture overlay — intense during flip, fades as page settles */
+.flip-page::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 600 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='c'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.015 0.035' numOctaves='5' stitchTiles='stitch' seed='7'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.06 0 0 0 0 0.04 0 0 0 0.72 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23c)'/%3E%3C/svg%3E");
+  background-size: 600px 600px;
+  opacity: 0;
+  mix-blend-mode: multiply;
+  transition: opacity 1.3s ease;
+  z-index: 40;
+}
+
+.flip-page:not(.is-flipped)::after {
+  opacity: 0.75;
+}
+
+/* Crease line at the top of each page — gives the "folded edge" feel */
+.flip-page::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 5%; right: 5%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.18), rgba(0,0,0,0.28), rgba(0,0,0,0.18), transparent);
+  z-index: 8;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.flip-page:not(.is-flipped)::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flip-page,
+  .flip-page::after,
+  .flip-page::before {
+    transition: none;
+  }
+  .flip-page:not(.is-flipped) {
+    transform: none;
+    opacity: 1;
+    filter: none;
+  }
+  .flip-page::after,
+  .flip-page::before {
+    opacity: 0 !important;
+  }
+}
+
+@media (max-width: 720px) {
+  .flip-page:not(.is-flipped) {
+    transform:
+      rotate3d(1, 0.1, 0, -35deg)
+      translateZ(-40px)
+      skewX(-1deg);
+    filter: blur(2px) brightness(0.9);
+  }
+}
+
+/* ---------- THE ASK ---------- */
+.ask {
+  padding: 160px 0;
+  text-align: center;
+  position: relative;
+}
+.ask h2 {
+  font-size: clamp(48px, 7vw, 96px);
+  max-width: 1000px;
+  margin: 0 auto 32px;
+  line-height: 1;
+}
+.ask p {
+  font-size: 18px;
+  max-width: 640px;
+  margin: 0 auto 20px;
+}
+.ask-mark {
+  display: inline-block;
+  font-family: 'Caveat', cursive;
+  font-size: 80px;
+  color: var(--red);
+  line-height: 1;
+  transform: rotate(-4deg);
+}
+
+footer {
+  border-top: 2px solid var(--ink);
+  padding: 40px 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: var(--ink-faded);
+  letter-spacing: 0.08em;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal.delay-1 { transition-delay: 0.1s; }
+.reveal.delay-2 { transition-delay: 0.2s; }
+.reveal.delay-3 { transition-delay: 0.3s; }
+.reveal.delay-4 { transition-delay: 0.4s; }
+
+@media (max-width: 980px) {
+  .hero { grid-template-columns: 1fr; padding: 60px 6vw 40px; }
+  .hero h1 { font-size: 88px; }
+  .chapter, .chapter.reverse { grid-template-columns: 1fr; direction: ltr; }
+  .num-grid { grid-template-columns: repeat(2, 1fr); }
+  .crit-grid { grid-template-columns: 1fr; }
+  .reach-item { grid-template-columns: 1fr; gap: 8px; }
+  .cascade { grid-template-columns: 1fr; gap: 24px; }
+  .cascade-step:not(:last-child)::after { display: none; }
+  .visits-grid { grid-template-columns: repeat(2, 1fr); }
+  .future-item { grid-template-columns: 1fr; }
+  .hats-strip { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .hat-step:not(:last-child)::after { display: none; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<!-- ============= HERO ============= -->
+<section class="hero">
+  <div class="hero-left reveal">
+    <div class="kicker">probationary review · annotated journey</div>
+    <h1>10.5<br/><span class="month">months.</span></h1>
+    <p class="hero-sub">
+      started <span class="annotation">7 july 2025</span> · no domain · one team · eight workstreams · thirty-plus iterations · one paper submitted · one community of <span class="scribble">70–100</span> still going.
+    </p>
+    <div class="hero-meta">
+      <div class="meta-item"><span class="meta-label">name</span>Rajath Singh R</div>
+      <div class="meta-item"><span class="meta-label">team</span>PAIR · Param AI Innovation &amp; Robotics</div>
+      <div class="meta-item"><span class="meta-label">base</span>Yuvapatha · ParSEC Whitefield (Tue–Thu)</div>
+      <div class="meta-item"><span class="meta-label">period</span>07.07.2025 → 19.05.2026</div>
+    </div>
+  </div>
+  <div class="hero-right reveal delay-2">
+    <div class="hero-arrow">that's me ↓<br/>(stick figure form)</div>
+    <div class="tape" style="top: 40px; left: -10px;">Exhibit A</div>
+    <svg viewBox="0 0 360 460" class="figure" aria-label="Composite figure with all accumulated kit">
+      <ellipse cx="180" cy="420" rx="90" ry="6" fill="rgba(31,27,22,0.08)"/>
+      <g class="stick" stroke-width="1.5" opacity="0.5">
+        <circle cx="60" cy="60" r="3"/>
+        <circle cx="300" cy="80" r="3"/>
+        <circle cx="40" cy="220" r="3"/>
+        <circle cx="320" cy="240" r="3"/>
+        <circle cx="70" cy="380" r="3"/>
+      </g>
+      <g class="stick stick-blue">
+        <line x1="290" y1="220" x2="290" y2="280"/>
+        <line x1="290" y1="220" x2="320" y2="200"/>
+        <line x1="320" y1="200" x2="340" y2="220"/>
+        <circle cx="290" cy="220" r="4" fill="var(--blue)"/>
+        <circle cx="320" cy="200" r="4" fill="var(--blue)"/>
+        <rect x="285" y="280" width="10" height="20" fill="var(--blue)"/>
+      </g>
+      <path d="M 340 220 Q 350 180 320 160 Q 290 145 280 170" class="stick stick-red" stroke-width="2"/>
+      <g class="stick" stroke-width="3">
+        <path d="M 158 105 Q 148 145 154 175" fill="none"/>
+        <path d="M 202 105 Q 212 145 206 175" fill="none"/>
+        <path d="M 162 105 Q 156 145 160 172" stroke-width="1.5" fill="none"/>
+        <path d="M 198 105 Q 204 145 200 172" stroke-width="1.5" fill="none"/>
+        <path d="M 145 100 L 215 100 L 210 88 L 150 88 Z" fill="var(--paper)"/>
+        <line x1="150" y1="88" x2="210" y2="88"/>
+        <circle cx="180" cy="125" r="22" class="stick-fill" fill="var(--paper)"/>
+        <circle cx="172" cy="123" r="1.8" fill="var(--ink)" stroke="none"/>
+        <circle cx="188" cy="123" r="1.8" fill="var(--ink)" stroke="none"/>
+        <path d="M 173 134 Q 180 138 187 134" fill="none"/>
+        <line x1="180" y1="147" x2="180" y2="260"/>
+        <line x1="180" y1="170" x2="135" y2="200"/>
+        <rect x="105" y="195" width="30" height="38" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+        <line x1="112" y1="207" x2="128" y2="207"/>
+        <line x1="112" y1="214" x2="128" y2="214"/>
+        <line x1="112" y1="221" x2="123" y2="221"/>
+        <text x="120" y="190" font-family="Caveat" font-size="14" fill="var(--red)" text-anchor="middle">paper</text>
+        <line x1="180" y1="170" x2="240" y2="200"/>
+        <line x1="240" y1="200" x2="285" y2="225"/>
+        <line x1="180" y1="260" x2="160" y2="320"/>
+        <line x1="180" y1="260" x2="200" y2="320"/>
+        <line x1="155" y1="320" x2="170" y2="320"/>
+        <line x1="195" y1="320" x2="210" y2="320"/>
+      </g>
+      <g class="stick" stroke-width="1.8" opacity="0.85">
+        <g transform="translate(60, 350)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="22"/><line x1="0" y1="11" x2="-7" y2="18"/><line x1="0" y1="11" x2="7" y2="18"/><line x1="0" y1="22" x2="-5" y2="33"/><line x1="0" y1="22" x2="5" y2="33"/></g>
+        <g transform="translate(95, 365)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="22"/><line x1="0" y1="11" x2="-7" y2="18"/><line x1="0" y1="11" x2="7" y2="18"/><line x1="0" y1="22" x2="-5" y2="33"/><line x1="0" y1="22" x2="5" y2="33"/></g>
+        <g transform="translate(265, 360)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="22"/><line x1="0" y1="11" x2="-7" y2="18"/><line x1="0" y1="11" x2="7" y2="18"/><line x1="0" y1="22" x2="-5" y2="33"/><line x1="0" y1="22" x2="5" y2="33"/></g>
+        <g transform="translate(300, 350)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="22"/><line x1="0" y1="11" x2="-7" y2="18"/><line x1="0" y1="11" x2="7" y2="18"/><line x1="0" y1="22" x2="-5" y2="33"/><line x1="0" y1="22" x2="5" y2="33"/></g>
+      </g>
+      <text x="320" y="320" font-family="Caveat" font-size="18" fill="var(--red)" transform="rotate(8 320 320)">+ 70–100</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ============= NUMBERS ============= -->
+<section class="numbers">
+  <div class="wrap">
+    <h2 class="section-title reveal">the numbers <span class="note">(headline count understates the work)</span></h2>
+    <p class="section-sub reveal delay-1">eight projects on paper · thirty-plus iterations underneath · most feed multiple downstream requirements.</p>
+    <div class="num-grid">
+      <div class="num reveal"><div class="num-big">8</div><div class="num-lbl">distinct workstreams</div><div class="num-annot">5 shipped/active · 3 closed</div></div>
+      <div class="num reveal delay-1"><div class="num-big">30+</div><div class="num-lbl">documented iterations</div><div class="num-annot">chatbot 12 · cobot 9 · vision AI 6 · sketch 3</div></div>
+      <div class="num reveal delay-2"><div class="num-big">30+</div><div class="num-lbl">technologies tested</div><div class="num-annot">LLMs · embedders · trackers · protocols · boards</div></div>
+      <div class="num reveal delay-3"><div class="num-big">12</div><div class="num-lbl">equations on UR10</div><div class="num-annot">8 worked · 4 documented failures</div></div>
+      <div class="num reveal"><div class="num-big">15<span style="font-size: 0.55em;">+</span></div><div class="num-lbl">people mentored</div><div class="num-annot">volunteers · interns · BMSCE</div></div>
+      <div class="num reveal delay-1"><div class="num-big">70–100</div><div class="num-lbl">in Nirman</div><div class="num-annot">still active · still building</div></div>
+      <div class="num reveal delay-2"><div class="num-big">5<span style="font-size: 0.55em;">+</span></div><div class="num-lbl">sessions delivered</div><div class="num-annot">5pm · Tech Tuesday · Town Hall · VS Code</div></div>
+      <div class="num reveal delay-3"><div class="num-big">1<sup style="font-size:0.4em;">st</sup></div><div class="num-lbl">team mentored to win</div><div class="num-annot">Vedanta Bharathi Hackathon</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="divider reveal">· · · the journey · · ·</div>
+
+  <!-- ============= CHAPTER 1 — BLANK SLATE ============= -->
+  <section class="chapter">
+    <div class="chapter-body reveal">
+      <div class="chapter-num">chapter 01</div>
+      <div class="chapter-date">07 jul 2025 · day one</div>
+      <h2>I had no idea<br/>what I was<br/>signing up for.</h2>
+      <p>Joined Param with the bare minimum — no hardware background, no event experience. Onboarded, set up Anaconda + Jupyter, attended the slide initiation, and started the first experiment that immediately broke (NLTK corrupt download).</p>
+      <p>Six months of probation ahead. Standard. Nothing to do with me specifically.</p>
+      <div class="tag-row">
+        <span class="tag">onboarding</span>
+        <span class="tag">first tools</span>
+        <span class="tag red">no domain</span>
+      </div>
+    </div>
+    <div class="chapter-figure reveal delay-2">
+      <svg viewBox="0 0 360 360" class="figure">
+        <ellipse cx="180" cy="330" rx="60" ry="4" fill="rgba(31,27,22,0.08)"/>
+        <g class="stick stick-red" stroke-width="2.5">
+          <text x="230" y="80" font-family="Caveat" font-size="72" fill="var(--red)" stroke="none">?</text>
+          <text x="280" y="120" font-family="Caveat" font-size="36" fill="var(--red-soft)" stroke="none">?</text>
+          <text x="80" y="100" font-family="Caveat" font-size="48" fill="var(--red-soft)" stroke="none">?</text>
+        </g>
+        <g class="stick" stroke-width="3">
+          <path d="M 156 160 Q 144 200 152 225" fill="none"/>
+          <path d="M 204 160 Q 216 200 208 225" fill="none"/>
+          <path d="M 160 155 Q 152 200 158 220" stroke-width="1.5" fill="none"/>
+          <path d="M 200 155 Q 208 200 202 220" stroke-width="1.5" fill="none"/>
+          <circle cx="180" cy="160" r="26" class="stick-fill" fill="var(--paper)"/>
+          <path d="M 156 142 Q 168 130 180 134 Q 192 130 204 142" fill="none"/>
+          <circle cx="170" cy="158" r="2.2" fill="var(--ink)" stroke="none"/>
+          <circle cx="190" cy="158" r="2.2" fill="var(--ink)" stroke="none"/>
+          <line x1="172" y1="172" x2="188" y2="172"/>
+          <line x1="180" y1="186" x2="180" y2="270"/>
+          <path d="M 180 200 Q 145 175 155 145 Q 158 135 168 138"/>
+          <line x1="180" y1="200" x2="210" y2="240"/>
+          <line x1="180" y1="270" x2="160" y2="320"/>
+          <line x1="180" y1="270" x2="200" y2="320"/>
+        </g>
+        <text x="60" y="290" font-family="Caveat" font-size="16" fill="var(--ink-faded)" transform="rotate(-8 60 290)">first day energy.</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============= CHAPTER 2 — FIRST: LOCAL RAG ============= -->
+  <section class="chapter reverse">
+    <div class="chapter-body reveal">
+      <div class="chapter-num">chapter 02 · first project</div>
+      <div class="chapter-date">16 jul 2025 → dec 2025 → ongoing as Oki</div>
+      <h2>the local RAG.<br/>(my first project.)</h2>
+      <p>Built a <strong>retrieval-augmented chatbot from scratch.</strong> Google Forms questionnaires to the science explainers to collect real-world visitor queries. Docling to parse the documents. <strong>all-mini-cube</strong> embeddings into <strong>Chroma DB</strong>. <strong>Dolphin 3.0 (8B)</strong> running locally. <strong>CUDA + cuDNN</strong> to make it fast. Manual JSON conversion because the open-source structurers were inaccurate.</p>
+      <p>Twelve iterations. Fine-tuning rounds. Docling versus Tesseract. JSON versus Markdown structuring. Retrieval-logic rewrites. And then a hard call: the local model wasn't relevant for production. <strong>Scrapped it. Pivoted to Google Live API with document-upload referencing.</strong></p>
+      <p>Deployed <span class="annotation">16 December 2025</span> at MaskersAdda for the Journey to Mars Hackathon. With <strong>Hari</strong> on final iterations. <strong>Aparna</strong> &amp; <strong>Inav</strong> gave it character. V1 was an intentional trial run — no data layer, the point was to test it under real visitor load.</p>
+      <p>Now it lives inside Project Octopus as <strong>Oki — the Dialogue Brain.</strong> V2 (token-optimised, data-driven) is in stakeholder discussion.</p>
+      <div class="tag-row">
+        <span class="tag">RAG v1 → v12</span>
+        <span class="tag">dolphin 3.0</span>
+        <span class="tag">chroma db</span>
+        <span class="tag red">scrapped local → google live api</span>
+        <span class="tag">shipped 16.12.25</span>
+        <span class="tag blue">→ Oki dialogue brain</span>
+      </div>
+    </div>
+    <div class="chapter-figure reveal delay-2">
+      <svg viewBox="0 0 360 360" class="figure">
+        <ellipse cx="180" cy="330" rx="80" ry="4" fill="rgba(31,27,22,0.08)"/>
+        <!-- speech bubble with text -->
+        <g>
+          <path d="M 200 60 L 320 60 L 320 130 L 280 130 L 260 150 L 268 130 L 200 130 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/>
+          <text x="210" y="82" font-family="JetBrains Mono" font-size="9" fill="var(--ink)">hello, visitor</text>
+          <text x="210" y="98" font-family="JetBrains Mono" font-size="9" fill="var(--ink)">> indexing...</text>
+          <text x="210" y="114" font-family="JetBrains Mono" font-size="9" fill="var(--red)">> dolphin 3.0 loaded</text>
+        </g>
+        <!-- iteration arrows on side -->
+        <g font-family="Caveat" font-size="14" fill="var(--ink-faded)">
+          <text x="20" y="100">v.01</text>
+          <text x="20" y="120">v.02</text>
+          <text x="20" y="140">v.03</text>
+          <text x="20" y="160">v.04</text>
+          <text x="20" y="180">v.05</text>
+          <text x="20" y="200">...</text>
+          <text x="20" y="220" fill="var(--red)" font-weight="700">v.12</text>
+        </g>
+        <line x1="50" y1="105" x2="65" y2="105" stroke="var(--ink-faded)"/>
+        <line x1="50" y1="125" x2="65" y2="125" stroke="var(--ink-faded)"/>
+        <line x1="50" y1="145" x2="65" y2="145" stroke="var(--ink-faded)"/>
+        <line x1="50" y1="165" x2="65" y2="165" stroke="var(--ink-faded)"/>
+        <line x1="50" y1="185" x2="65" y2="185" stroke="var(--ink-faded)"/>
+        <line x1="50" y1="225" x2="65" y2="225" stroke="var(--red)" stroke-width="2"/>
+        <!-- figure at laptop -->
+        <g class="stick" stroke-width="3">
+          <path d="M 158 172 Q 148 205 154 225" fill="none"/>
+          <path d="M 202 172 Q 212 205 206 225" fill="none"/>
+          <path d="M 162 165 Q 156 205 160 220" stroke-width="1.5" fill="none"/>
+          <path d="M 198 165 Q 204 205 200 220" stroke-width="1.5" fill="none"/>
+          <circle cx="180" cy="170" r="22" class="stick-fill" fill="var(--paper)"/>
+          <path d="M 158 152 Q 170 142 180 144 Q 190 142 202 152" fill="none"/>
+          <circle cx="172" cy="168" r="1.8" fill="var(--ink)" stroke="none"/>
+          <circle cx="188" cy="168" r="1.8" fill="var(--ink)" stroke="none"/>
+          <path d="M 173 180 Q 180 184 187 180"/>
+          <line x1="180" y1="192" x2="178" y2="260"/>
+          <line x1="180" y1="205" x2="155" y2="235"/>
+          <line x1="180" y1="205" x2="205" y2="235"/>
+          <path d="M 140 240 L 220 240 L 230 268 L 130 268 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/>
+          <line x1="135" y1="270" x2="225" y2="270" stroke-width="2"/>
+          <line x1="155" y1="247" x2="200" y2="247" stroke="var(--red)" stroke-width="1.5"/>
+          <line x1="155" y1="253" x2="190" y2="253" stroke="var(--red)" stroke-width="1.5"/>
+          <line x1="155" y1="259" x2="195" y2="259" stroke="var(--red)" stroke-width="1.5"/>
+          <line x1="178" y1="260" x2="158" y2="315"/>
+          <line x1="178" y1="260" x2="198" y2="315"/>
+        </g>
+        <text x="295" y="170" font-family="Caveat" font-size="14" fill="var(--red)" text-anchor="middle">+ CUDA</text>
+        <text x="295" y="190" font-family="Caveat" font-size="14" fill="var(--red)" text-anchor="middle">+ chroma db</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============= CHAPTER 3 — SECOND: CUPCAKE → MATH IN MOTION ============= -->
+  <section class="chapter">
+    <div class="chapter-body reveal">
+      <div class="chapter-num">chapter 03 · second project</div>
+      <div class="chapter-date">jul 2025 → 14–15 apr 2026 · paper result 29 may</div>
+      <h2>cupcake.<br/>a complete<br/>journey.</h2>
+      <p><em>This project was not in my domain.</em> It started as an <strong>exploration</strong> and crystallised into a single use case — <strong>Math in Motion</strong>. I was in the entire arc: <strong>exploration → build → push → outcome.</strong></p>
+
+      <div class="phase">
+        <div class="phase-num">01 · origin · the exploration</div>
+        <p>First Polyscope touch in July 2025. Python through the UR Primary Client Interface. MoveJ. Inverse kinematics — complex, painful — paused. Pivoted to the <strong>RTDE protocol</strong>, cracked blend radius, then complex 3D patterns. The exploration narrowed to a single idea: <em>render any mathematical equation as physical motion.</em></p>
+      </div>
+
+      <div class="phase">
+        <div class="phase-num">02 · build · the pipeline</div>
+        <p><strong>I built the pipeline.</strong> All three Python stages — equation evaluation, normalization + joint-space transform, transmission + monitoring. The lab lead later <strong>identified and fine-tuned</strong> what I had built into a publication-ready form. Third author on the submitted paper. Public code at <span class="mono">github.com/iria-param/Math_in_Motion</span>.</p>
+      </div>
+
+      <div class="phase">
+        <div class="phase-num">03 · push · exploited as far as it would go</div>
+        <p>12 equations physically tested. <strong>8 validated</strong> — Heart, Lemniscate, Butterfly, Archimedean Spiral, Batman, Lorenz, Aizawa, Rose 5-petal. <strong>4 documented failures + 4 predicted failures.</strong> Universal Robotics engineers said real-time motion required their newer model; we <strong>pre-uploaded URScript timed with the UI</strong> on the existing UR10. <strong>Joint brainstorming with IM Lab</strong> produced the in-house acrylic barricade. The <strong>Digital team</strong> built the UI.</p>
+      </div>
+
+      <div class="phase">
+        <div class="phase-num">04 · outcome · two deliverables + a literacy</div>
+        <p>Two outcomes from one project: a <strong>live exhibit at ParSEC</strong> (14–15 April 2026) and a <strong>submitted research paper</strong> (result 29 May). And the third — the one I value most — <em>understanding how the research team, content team, build team, and IM Lab each function.</em></p>
+      </div>
+
+      <div class="callout-quote">
+        making an engineering marvel<br/>means nothing if the intention<br/>of it is not conveyed.
+      </div>
+
+      <p class="annotation" style="margin-top: 16px;">→ I consider this a complete journey.</p>
+
+      <div class="tag-row">
+        <span class="tag">third author</span>
+        <span class="tag">UR10 CB3</span>
+        <span class="tag">URScript + RTDE</span>
+        <span class="tag red">UR workaround</span>
+        <span class="tag">exhibit + paper shipped</span>
+        <span class="tag blue">IM Lab · Digital · PAIR</span>
+        <span class="tag red">out of my domain</span>
+      </div>
+
+      <!-- WORE MULTIPLE HATS STRIP -->
+      <div class="hats-strip">
+        <div class="hat-step">
+          <svg viewBox="0 0 80 100">
+            <g class="stick" stroke-width="2.5">
+              <circle cx="40" cy="35" r="14" fill="var(--paper)"/>
+              <text x="40" y="20" font-family="Caveat" font-size="20" fill="var(--red)" text-anchor="middle" stroke="none">?</text>
+              <circle cx="36" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="44" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M 36 42 Q 40 39 44 42"/>
+              <line x1="40" y1="49" x2="40" y2="78"/>
+              <line x1="40" y1="56" x2="28" y2="64"/>
+              <line x1="40" y1="56" x2="52" y2="64"/>
+              <line x1="40" y1="78" x2="32" y2="92"/>
+              <line x1="40" y1="78" x2="48" y2="92"/>
+            </g>
+          </svg>
+          <div class="hat-label">curious mind</div>
+          <div class="hat-sub">i don't know yet</div>
+        </div>
+        <div class="hat-step">
+          <svg viewBox="0 0 80 100">
+            <g class="stick" stroke-width="2.5">
+              <path d="M 28 25 L 52 25 L 50 19 L 30 19 Z"/>
+              <circle cx="40" cy="35" r="14" fill="var(--paper)"/>
+              <circle cx="36" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="44" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M 36 42 Q 40 45 44 42"/>
+              <line x1="40" y1="49" x2="40" y2="78"/>
+              <line x1="40" y1="56" x2="28" y2="64"/>
+              <line x1="40" y1="56" x2="55" y2="60"/>
+              <rect x="55" y="58" width="10" height="4" fill="var(--blue)" stroke="none"/>
+              <line x1="40" y1="78" x2="32" y2="92"/>
+              <line x1="40" y1="78" x2="48" y2="92"/>
+            </g>
+          </svg>
+          <div class="hat-label">engineer</div>
+          <div class="hat-sub">building the pipeline</div>
+        </div>
+        <div class="hat-step">
+          <svg viewBox="0 0 80 100">
+            <g class="stick" stroke-width="2.5">
+              <rect x="30" y="16" width="20" height="3" fill="var(--ink)"/>
+              <path d="M 28 19 L 52 19 L 50 17 L 30 17 Z" fill="var(--ink)"/>
+              <line x1="52" y1="19" x2="60" y2="22"/>
+              <circle cx="62" cy="23" r="1.5" fill="var(--red)" stroke="var(--red)"/>
+              <circle cx="40" cy="35" r="14" fill="var(--paper)"/>
+              <circle cx="36" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="44" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M 36 42 Q 40 45 44 42"/>
+              <line x1="40" y1="49" x2="40" y2="78"/>
+              <line x1="40" y1="56" x2="22" y2="64"/>
+              <rect x="14" y="60" width="12" height="14" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.5"/>
+              <line x1="40" y1="56" x2="52" y2="64"/>
+              <line x1="40" y1="78" x2="32" y2="92"/>
+              <line x1="40" y1="78" x2="48" y2="92"/>
+            </g>
+          </svg>
+          <div class="hat-label">researcher</div>
+          <div class="hat-sub">writing &amp; validating</div>
+        </div>
+        <div class="hat-step">
+          <svg viewBox="0 0 80 100">
+            <g class="stick" stroke-width="2.5">
+              <circle cx="40" cy="35" r="14" fill="var(--paper)"/>
+              <circle cx="36" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="44" cy="34" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M 36 42 Q 40 45 44 42"/>
+              <line x1="40" y1="49" x2="40" y2="78"/>
+              <line x1="40" y1="56" x2="55" y2="60"/>
+              <line x1="40" y1="56" x2="25" y2="62"/>
+              <line x1="40" y1="78" x2="32" y2="92"/>
+              <line x1="40" y1="78" x2="48" y2="92"/>
+              <!-- robot arm -->
+              <line x1="55" y1="60" x2="68" y2="55" stroke="var(--blue)"/>
+              <circle cx="68" cy="55" r="2" fill="var(--blue)" stroke="var(--blue)"/>
+            </g>
+          </svg>
+          <div class="hat-label">on the ground</div>
+          <div class="hat-sub">deployment + visitors</div>
+        </div>
+      </div>
+    </div>
+    <div class="chapter-figure reveal delay-2">
+      <svg viewBox="0 0 360 360" class="figure">
+        <ellipse cx="180" cy="330" rx="80" ry="4" fill="rgba(31,27,22,0.08)"/>
+        <g fill="none" stroke="var(--red)" stroke-width="2">
+          <path d="M 60 70 Q 90 50 110 70 Q 100 100 90 110 Q 80 100 90 80 Q 80 90 70 80 Q 60 70 60 70"/>
+          <text x="55" y="55" font-family="JetBrains Mono" font-size="9" fill="var(--ink-faded)" stroke="none">heart</text>
+        </g>
+        <g fill="none" stroke="var(--blue)" stroke-width="2">
+          <path d="M 240 60 Q 270 50 285 65 Q 280 80 265 75 Q 260 65 275 55 Q 290 60 300 80 Q 280 95 260 85 Q 240 75 240 60"/>
+          <text x="240" y="50" font-family="JetBrains Mono" font-size="9" fill="var(--ink-faded)" stroke="none">lorenz</text>
+        </g>
+        <g class="stick stick-blue" stroke-width="3">
+          <rect x="245" y="280" width="40" height="20" fill="var(--paper)"/>
+          <line x1="265" y1="280" x2="265" y2="220"/>
+          <circle cx="265" cy="220" r="5" fill="var(--blue)"/>
+          <line x1="265" y1="220" x2="305" y2="180"/>
+          <circle cx="305" cy="180" r="5" fill="var(--blue)"/>
+          <line x1="305" y1="180" x2="290" y2="140"/>
+          <line x1="290" y1="140" x2="285" y2="130"/>
+          <line x1="290" y1="140" x2="295" y2="130"/>
+        </g>
+        <g class="stick" stroke-width="3">
+          <path d="M 118 162 Q 108 195 114 215" fill="none"/>
+          <path d="M 162 162 Q 172 195 166 215" fill="none"/>
+          <path d="M 122 155 Q 116 195 120 210" stroke-width="1.5" fill="none"/>
+          <path d="M 158 155 Q 164 195 160 210" stroke-width="1.5" fill="none"/>
+          <circle cx="140" cy="160" r="22" class="stick-fill" fill="var(--paper)"/>
+          <path d="M 118 142 Q 130 132 140 134 Q 150 132 162 142" fill="none"/>
+          <circle cx="132" cy="158" r="1.8" fill="var(--ink)" stroke="none"/>
+          <circle cx="148" cy="158" r="1.8" fill="var(--ink)" stroke="none"/>
+          <path d="M 133 170 Q 140 174 147 170"/>
+          <line x1="140" y1="182" x2="140" y2="260"/>
+          <line x1="140" y1="195" x2="105" y2="215"/>
+          <rect x="80" y="210" width="30" height="40" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="86" y1="220" x2="104" y2="220" stroke-width="1.5"/>
+          <line x1="86" y1="227" x2="104" y2="227" stroke-width="1.5"/>
+          <line x1="86" y1="234" x2="100" y2="234" stroke-width="1.5"/>
+          <line x1="140" y1="195" x2="200" y2="230"/>
+          <line x1="140" y1="260" x2="125" y2="310"/>
+          <line x1="140" y1="260" x2="155" y2="310"/>
+        </g>
+        <text x="30" y="290" font-family="Caveat" font-size="16" fill="var(--red)" transform="rotate(-4 30 290)">3rd author</text>
+        <text x="180" y="320" font-family="Caveat" font-size="14" fill="var(--ink-faded)" text-anchor="middle">+ acrylic barricade w/ IM Lab</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============= CHAPTER 4 — THIRD: SKETCH BOT ============= -->
+  <section class="chapter reverse">
+    <div class="chapter-body reveal">
+      <div class="chapter-num">chapter 04 · third project</div>
+      <div class="chapter-date">jul 2025 → curriculum handed to makerspace</div>
+      <h2>sketch bot →<br/>curriculum.</h2>
+      <p>Started as an <strong>image-to-SVG converter</strong> for robotic drawing applications. Edge-detection prototypes — Canny, HED, Potrace. Three iterations. None of them satisfied me. Decided we'd need our own model and our own dataset.</p>
+      <p>Sent the first cold collaboration email of my career (BPS Space). No response. Filed it.</p>
+      <p><strong>Then a quiet pivot.</strong> The technical problem was real, but the more valuable artefact wasn't a single bot — it was a <strong>learning path</strong>. I built a complete <strong>level- and project-wise curriculum</strong> around custom Python development and computer-vision sketch generation, and <strong>handed it to the Makerspace.</strong></p>
+      <p>Sketch Bot lives on as a learning artefact every Makerspace user can pick up. <em>The project becoming curriculum is the outcome.</em></p>
+      <div class="tag-row">
+        <span class="tag">image → SVG</span>
+        <span class="tag">canny · HED · potrace</span>
+        <span class="tag red">→ makerspace curriculum</span>
+        <span class="tag">level + project structured</span>
+      </div>
+    </div>
+    <div class="chapter-figure reveal delay-2">
+      <svg viewBox="0 0 360 360" class="figure">
+        <ellipse cx="180" cy="320" rx="110" ry="5" fill="rgba(31,27,22,0.08)"/>
+        <text x="180" y="40" font-family="Caveat" font-size="20" fill="var(--red)" text-anchor="middle" font-weight="700">handed over.</text>
+
+        <!-- book / curriculum -->
+        <g transform="translate(180, 70)">
+          <path d="M -60 0 L 60 0 L 70 10 L -50 10 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/>
+          <path d="M -50 10 L 70 10 L 70 60 L -50 60 Z" fill="var(--paper)" stroke="var(--ink)" stroke-width="2.5"/>
+          <line x1="10" y1="10" x2="10" y2="60" stroke="var(--ink)" stroke-width="1"/>
+          <text x="-25" y="35" font-family="Caveat" font-size="16" fill="var(--red)" font-weight="700" text-anchor="middle">level 1</text>
+          <text x="-25" y="52" font-family="JetBrains Mono" font-size="8" fill="var(--ink-faded)" text-anchor="middle">edge detection</text>
+          <text x="40" y="35" font-family="Caveat" font-size="16" fill="var(--red)" font-weight="700" text-anchor="middle">level 2</text>
+          <text x="40" y="52" font-family="JetBrains Mono" font-size="8" fill="var(--ink-faded)" text-anchor="middle">custom models</text>
+        </g>
+
+        <!-- 4 students at same scale -->
+        <g class="stick" stroke-width="2.5">
+          <g transform="translate(65, 230)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(105, 245)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(255, 245)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(295, 230)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+        </g>
+
+        <!-- Rajath, same size, long hair, pointing up at book -->
+        <g transform="translate(180, 195)" class="stick" stroke-width="2.5">
+          <path d="M -8 -2 Q -16 20 -11 40" fill="none"/>
+          <path d="M 8 -2 Q 16 20 11 40" fill="none"/>
+          <path d="M -5 -7 Q -9 22 -6 35" stroke-width="1.5" fill="none"/>
+          <path d="M 5 -7 Q 9 22 6 35" stroke-width="1.5" fill="none"/>
+          <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+          <path d="M -8 -5 Q 0 -14 8 -5" fill="none"/>
+          <circle cx="-3.5" cy="0" r="1.3" fill="var(--ink)" stroke="none"/>
+          <circle cx="3.5" cy="0" r="1.3" fill="var(--ink)" stroke="none"/>
+          <path d="M -3 6 Q 0 8 3 6" fill="none"/>
+          <line x1="0" y1="10" x2="0" y2="48"/>
+          <line x1="0" y1="16" x2="-18" y2="-25"/>
+          <line x1="0" y1="18" x2="22" y2="32"/>
+          <line x1="0" y1="48" x2="-12" y2="76"/>
+          <line x1="0" y1="48" x2="12" y2="76"/>
+        </g>
+
+        <text x="226" y="190" font-family="Caveat" font-size="14" fill="var(--red)" transform="rotate(-4 226 190)">↑ that's me</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============= CLOSED PROJECTS STRIP ============= -->
+  <div class="closed-wrap reveal">
+    <div class="closed-label">3 closed · documented · honest</div>
+    <div class="closed-grid">
+      <div class="closed-card">
+        <svg viewBox="0 0 80 80">
+          <g class="stick" stroke-width="2">
+            <ellipse cx="40" cy="40" rx="22" ry="14"/>
+            <circle cx="40" cy="40" r="9" fill="var(--paper)"/>
+            <circle cx="40" cy="40" r="4" fill="var(--ink)" stroke="none"/>
+            <line x1="20" y1="58" x2="60" y2="58" stroke-dasharray="3 3"/>
+            <text x="40" y="72" font-family="JetBrains Mono" font-size="7" fill="var(--ink-faded)" text-anchor="middle" stroke="none">eye tracker</text>
+          </g>
+        </svg>
+        <div class="closed-name">animatronic eye</div>
+        <div class="closed-reason">head-tracking upgrade attempted.<br/>didn't work. low priority.</div>
+      </div>
+      <div class="closed-card">
+        <svg viewBox="0 0 80 80">
+          <g class="stick" stroke-width="2">
+            <rect x="22" y="42" width="36" height="22" fill="var(--paper)"/>
+            <text x="40" y="56" font-family="JetBrains Mono" font-size="7" fill="var(--ink)" text-anchor="middle" stroke="none">H · He · Li</text>
+            <line x1="40" y1="42" x2="40" y2="22"/>
+            <circle cx="40" cy="20" r="7"/>
+            <line x1="40" y1="27" x2="40" y2="30"/>
+            <line x1="34" y1="30" x2="46" y2="30"/>
+          </g>
+        </svg>
+        <div class="closed-name">ROPA</div>
+        <div class="closed-reason">interactive periodic-elements cobot.<br/>Elephant Robotics mini 6-DOF arm malfunctioned.</div>
+      </div>
+      <div class="closed-card">
+        <svg viewBox="0 0 80 80">
+          <g class="stick" stroke-width="2">
+            <rect x="20" y="22" width="40" height="40" fill="var(--paper)"/>
+            <line x1="30" y1="22" x2="30" y2="62"/>
+            <line x1="40" y1="22" x2="40" y2="62"/>
+            <line x1="50" y1="22" x2="50" y2="62"/>
+            <line x1="20" y1="32" x2="60" y2="32"/>
+            <line x1="20" y1="42" x2="60" y2="42"/>
+            <line x1="20" y1="52" x2="60" y2="52"/>
+            <rect x="22" y="24" width="8" height="8" fill="var(--ink)" stroke="none"/>
+            <rect x="42" y="34" width="8" height="8" fill="var(--ink)" stroke="none"/>
+            <rect x="32" y="44" width="8" height="8" fill="var(--ink)" stroke="none"/>
+            <rect x="52" y="54" width="8" height="8" fill="var(--ink)" stroke="none"/>
+          </g>
+        </svg>
+        <div class="closed-name">chess bot</div>
+        <div class="closed-reason">director + lead procured<br/>a better commercial alternative.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider reveal">~ then the bigger moments ~</div>
+
+  <!-- ============= CHAPTER 5 — HACKATHON ============= -->
+  <section class="chapter">
+    <div class="chapter-body reveal">
+      <div class="chapter-num">chapter 05</div>
+      <div class="chapter-date">dec 2025 · journey to mars · 3 days · 72 people</div>
+      <h2>I didn't witness<br/>a community.<br/><span style="color: var(--red);">I built one.</span></h2>
+      <p><strong>72 people from across India.</strong> Students, professionals, engineers who took leave just to come build something. Iron Man cave energy — stripped wires, messy desks, the smell of solder, people who hadn't slept not because they had to stay up but because they <em>couldn't stop.</em></p>
+      <p>My job wasn't to build. My job was to <strong>carry Param's culture into that competition.</strong> So I made 72 strangers talk. Sat with them at midnight. Asked them what made them passionate about this, what drove them here. Made it less about winning, more about ideas exchanged.</p>
+      <p>I found out — <em>I'm actually good at making people feel like they belonged in a room. At turning pressure into energy.</em></p>
+      <p class="annotation">→ Nirman seeded here. Still active. Still building.</p>
+      <div class="tag-row">
+        <span class="tag">community build</span>
+        <span class="tag">cultural ambassador</span>
+        <span class="tag red">Nirman · 70–100</span>
+        <span class="tag">chatbot deployed</span>
+      </div>
+    </div>
+    <div class="chapter-figure reveal delay-2">
+      <svg viewBox="0 0 360 360" class="figure">
+        <ellipse cx="180" cy="320" rx="130" ry="5" fill="rgba(31,27,22,0.08)"/>
+        <text x="180" y="55" font-family="Caveat" font-size="36" fill="var(--red)" text-anchor="middle" font-weight="700">72.</text>
+        <text x="180" y="78" font-family="Caveat" font-size="16" fill="var(--ink-faded)" text-anchor="middle">still in touch.</text>
+
+        <!-- 6 community figures, same scale as protagonist -->
+        <g class="stick" stroke-width="2.5">
+          <g transform="translate(55, 175)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(95, 235)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(265, 235)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(305, 175)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(75, 115)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(285, 115)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+        </g>
+
+        <!-- Rajath (you) — same size, long hair, central -->
+        <g transform="translate(180, 175)" class="stick" stroke-width="2.5">
+          <path d="M -8 -2 Q -16 20 -11 40" fill="none"/>
+          <path d="M 8 -2 Q 16 20 11 40" fill="none"/>
+          <path d="M -5 -7 Q -9 22 -6 35" stroke-width="1.5" fill="none"/>
+          <path d="M 5 -7 Q 9 22 6 35" stroke-width="1.5" fill="none"/>
+          <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+          <path d="M -8 -5 Q 0 -14 8 -5" fill="none"/>
+          <circle cx="-3.5" cy="0" r="1.3" fill="var(--ink)" stroke="none"/>
+          <circle cx="3.5" cy="0" r="1.3" fill="var(--ink)" stroke="none"/>
+          <path d="M -3 6 Q 0 8 3 6" fill="none"/>
+          <line x1="0" y1="10" x2="0" y2="48"/>
+          <line x1="0" y1="18" x2="-45" y2="10"/>
+          <line x1="0" y1="18" x2="45" y2="10"/>
+          <line x1="0" y1="48" x2="-12" y2="76"/>
+          <line x1="0" y1="48" x2="12" y2="76"/>
+        </g>
+
+        <text x="232" y="170" font-family="Caveat" font-size="14" fill="var(--red)" transform="rotate(-4 232 170)">↑ that's me</text>
+
+        <!-- Connection lines from Rajath to community -->
+        <g stroke="var(--red)" stroke-width="1" stroke-dasharray="3 3" fill="none" opacity="0.6">
+          <path d="M 135 185 Q 100 195 65 180"/>
+          <path d="M 135 190 Q 115 215 100 230"/>
+          <path d="M 225 190 Q 245 215 260 230"/>
+          <path d="M 225 185 Q 260 195 295 180"/>
+          <path d="M 145 168 Q 110 145 82 125"/>
+          <path d="M 215 168 Q 250 145 278 125"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============= CHAPTER 6 — ARCHITECT ============= -->
+  <section class="chapter reverse">
+    <div class="chapter-body reveal">
+      <div class="chapter-num">chapter 06</div>
+      <div class="chapter-date">mar — may 2026 · project octopus · vision AI</div>
+      <h2>the architect<br/>moment.</h2>
+      <p>Project Octopus arrived as a lead-driven moonshot. <strong>I did not propose it. The full technical execution on my assigned problem statements lies on my hands.</strong> P1 (cross-touchpoint visitor ID + DB) and P2 (chatbot logging at 2 exhibits) — mine.</p>
+      <p>Within Octopus's Vision AI, <strong>I proposed the 3-tangent split</strong> — Room AI, Visitor Analytics, Desk Tracking — from a single base. Not handed down. My architecture call.</p>
+      <p>My current architectural approach <em>(in progress)</em>: a <strong>symbiotic framework</strong> — vision AI built to integrate <em>into</em> the existing CCTV / network / access infrastructure rather than forcing the infrastructure to change for it. <em>If it lands, the stack becomes portable to any Param location or partner site without per-site infrastructure projects.</em></p>
+      <p>Camera positioning was not optimal for AI use as installed. When I enquired about it, I learned the facility had <strong>already planned for additional cameras</strong>. The constraint resolved by surfacing what was already in motion — a deployment timeline to work toward.</p>
+      <p>The primitive zone tracking with basic metrics was contributed by <strong>Yatheesh</strong>. I refined that baseline and now lead the technical research phase from there.</p>
+      <p class="annotation">→ technical research lead. project-level outcomes remain with team lead. 46% baseline. single-camera → multi-camera next.</p>
+      <div class="tag-row">
+        <span class="tag">octopus P1 + P2</span>
+        <span class="tag red">3-tangent split (mine)</span>
+        <span class="tag red">symbiotic framework (mine)</span>
+        <span class="tag">YOLO · ByteTrack · BoT-SORT</span>
+        <span class="tag blue">17 passing tests</span>
+      </div>
+    </div>
+    <div class="chapter-figure reveal delay-2">
+      <svg viewBox="0 0 360 360" class="figure">
+        <ellipse cx="180" cy="330" rx="80" ry="4" fill="rgba(31,27,22,0.08)"/>
+        <g fill="none" stroke="var(--blue)" stroke-width="1.5" opacity="0.5">
+          <circle cx="60" cy="60" r="12"/>
+          <circle cx="300" cy="60" r="12"/>
+          <circle cx="30" cy="180" r="12"/>
+          <circle cx="330" cy="180" r="12"/>
+        </g>
+        <g stroke="var(--blue)" stroke-width="1" fill="none" stroke-dasharray="2 4">
+          <path d="M 180 130 Q 130 100 70 65"/>
+          <path d="M 180 130 Q 230 100 290 65"/>
+          <path d="M 180 200 Q 110 195 42 180"/>
+          <path d="M 180 200 Q 260 195 318 180"/>
+        </g>
+        <g class="stick" stroke-width="3">
+          <path d="M 158 115 Q 148 150 154 175" fill="none"/>
+          <path d="M 202 115 Q 212 150 206 175" fill="none"/>
+          <path d="M 162 112 Q 156 148 160 172" stroke-width="1.5" fill="none"/>
+          <path d="M 198 112 Q 204 148 200 172" stroke-width="1.5" fill="none"/>
+          <path d="M 152 102 L 208 102 L 200 92 L 160 92 Z" fill="var(--paper)"/>
+          <line x1="155" y1="92" x2="205" y2="92" stroke-width="2"/>
+          <rect x="158" y="74" width="44" height="6" fill="var(--paper)"/>
+          <path d="M 156 80 L 204 80 L 200 78 L 160 78 Z" fill="var(--ink)"/>
+          <line x1="208" y1="80" x2="220" y2="85"/>
+          <circle cx="222" cy="86" r="2.5" fill="var(--red)" stroke="var(--red)"/>
+          <circle cx="180" cy="138" r="22" class="stick-fill" fill="var(--paper)"/>
+          <circle cx="172" cy="138" r="1.8" fill="var(--ink)" stroke="none"/>
+          <circle cx="188" cy="138" r="1.8" fill="var(--ink)" stroke="none"/>
+          <path d="M 173 150 Q 180 154 187 150"/>
+          <line x1="180" y1="160" x2="180" y2="240"/>
+          <line x1="180" y1="175" x2="135" y2="190"/>
+          <line x1="180" y1="175" x2="225" y2="190"/>
+          <line x1="180" y1="240" x2="160" y2="295"/>
+          <line x1="180" y1="240" x2="200" y2="295"/>
+        </g>
+        <g transform="translate(60, 290)">
+          <rect x="-12" y="-8" width="24" height="14" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.8"/>
+          <circle cx="0" cy="-1" r="4" stroke="var(--ink)" fill="none" stroke-width="1.5"/>
+          <text x="0" y="20" font-family="JetBrains Mono" font-size="9" fill="var(--ink-faded)" text-anchor="middle">cctv</text>
+        </g>
+        <g transform="translate(300, 290)">
+          <rect x="-12" y="-8" width="24" height="14" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.8"/>
+          <circle cx="0" cy="-1" r="4" stroke="var(--ink)" fill="none" stroke-width="1.5"/>
+          <text x="0" y="20" font-family="JetBrains Mono" font-size="9" fill="var(--ink-faded)" text-anchor="middle">cctv</text>
+        </g>
+        <text x="55" y="50" font-family="Caveat" font-size="14" fill="var(--ink-faded)" transform="rotate(-5 55 50)">9 brains.</text>
+        <text x="280" y="50" font-family="Caveat" font-size="14" fill="var(--ink-faded)" transform="rotate(5 280 50)">3 tangents.</text>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============= CHAPTER 7 — MENTOR ============= -->
+  <section class="chapter">
+    <div class="chapter-body reveal">
+      <div class="chapter-num">chapter 07</div>
+      <div class="chapter-date">throughout · mentoring → winning team</div>
+      <h2>the mentor.</h2>
+      <p>At Vedanta Bharathi, I mentored a team. Built the foundation of their project on the <strong>same principles I'd used building Oki</strong>. Helped them understand the concepts during the build.</p>
+      <p><strong>They won 1st place.</strong> A few of them said I made a difference. <em>That meant more to me than any prize would have.</em></p>
+      <p>I also <strong>showed the interns a faster path</strong> — and offered them an exciting project to try it on. The demo shipped in <span class="annotation">2 days.</span> The interns I introduced to AI agents through that experience are now using them successfully in their own work.</p>
+      <div class="tag-row">
+        <span class="tag">15+ mentees</span>
+        <span class="tag red">1st place · vedanta bharathi</span>
+        <span class="tag">AI agents adopted</span>
+        <span class="tag">2-day demo</span>
+      </div>
+    </div>
+    <div class="chapter-figure reveal delay-2">
+      <svg viewBox="0 0 360 360" class="figure">
+        <ellipse cx="180" cy="320" rx="120" ry="5" fill="rgba(31,27,22,0.08)"/>
+        <g transform="translate(180, 70)">
+          <path d="M -15 0 L 15 0 L 13 20 Q 0 28 -13 20 Z" fill="var(--yellow)" stroke="var(--ink)" stroke-width="2"/>
+          <path d="M -15 5 L -22 5 L -22 -2" fill="none" stroke="var(--ink)" stroke-width="2"/>
+          <path d="M 15 5 L 22 5 L 22 -2" fill="none" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="0" y1="28" x2="0" y2="36" stroke="var(--ink)" stroke-width="2"/>
+          <line x1="-8" y1="36" x2="8" y2="36" stroke="var(--ink)" stroke-width="2"/>
+          <text x="0" y="18" font-family="Caveat" font-size="18" fill="var(--ink)" text-anchor="middle" font-weight="700">1st</text>
+        </g>
+
+        <!-- 4 mentees, same scale as protagonist -->
+        <g class="stick" stroke-width="2.5">
+          <g transform="translate(70, 220)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(110, 235)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(250, 235)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+          <g transform="translate(290, 220)">
+            <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+            <line x1="0" y1="10" x2="0" y2="48"/>
+            <line x1="0" y1="18" x2="-13" y2="32"/>
+            <line x1="0" y1="18" x2="13" y2="32"/>
+            <line x1="0" y1="48" x2="-10" y2="76"/>
+            <line x1="0" y1="48" x2="10" y2="76"/>
+          </g>
+        </g>
+
+        <!-- Rajath, same size, long hair, central -->
+        <g transform="translate(180, 175)" class="stick" stroke-width="2.5">
+          <path d="M -8 -2 Q -16 20 -11 40" fill="none"/>
+          <path d="M 8 -2 Q 16 20 11 40" fill="none"/>
+          <path d="M -5 -7 Q -9 22 -6 35" stroke-width="1.5" fill="none"/>
+          <path d="M 5 -7 Q 9 22 6 35" stroke-width="1.5" fill="none"/>
+          <circle cx="0" cy="0" r="10" class="stick-fill" fill="var(--paper)"/>
+          <path d="M -8 -5 Q 0 -14 8 -5" fill="none"/>
+          <circle cx="-3.5" cy="0" r="1.3" fill="var(--ink)" stroke="none"/>
+          <circle cx="3.5" cy="0" r="1.3" fill="var(--ink)" stroke="none"/>
+          <path d="M -3 6 Q 0 8 3 6" fill="none"/>
+          <line x1="0" y1="10" x2="0" y2="48"/>
+          <line x1="0" y1="18" x2="-45" y2="14"/>
+          <line x1="0" y1="18" x2="45" y2="14"/>
+          <line x1="0" y1="48" x2="-12" y2="76"/>
+          <line x1="0" y1="48" x2="12" y2="76"/>
+        </g>
+
+        <text x="232" y="170" font-family="Caveat" font-size="14" fill="var(--red)" transform="rotate(-4 232 170)">↑ that's me</text>
+
+        <g stroke="var(--red)" stroke-width="1.2" fill="none" stroke-dasharray="3 3" opacity="0.7">
+          <path d="M 135 189 Q 100 200 80 215"/>
+          <path d="M 135 192 Q 115 215 115 230"/>
+          <path d="M 225 192 Q 240 215 245 230"/>
+          <path d="M 225 189 Q 260 200 285 215"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <div class="divider reveal">· · · the things that made it hard · · ·</div>
+
+  <!-- ============= CHAPTER 8 — CHALLENGES ============= -->
+  <section class="chapter" style="grid-template-columns: 1fr; gap: 40px;">
+    <div class="reveal">
+      <div class="chapter-num">chapter 08</div>
+      <div class="chapter-date">the three challenges that defined the year</div>
+      <h2>three challenges.<br/>three different handling moves.</h2>
+      <p style="max-width: 720px; font-size: 18px;">None of these resolutions reduce to <em>"I worked harder."</em> Each one is a different kind of move — change the environment, change the structure of my own work, convert the tendency into teaching.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="reveal delay-2">
+      <div style="padding: 24px; background: var(--paper); border: 2px solid var(--ink); position: relative;">
+        <div class="kicker" style="margin-bottom: 8px;">8.1 · environment</div>
+        <h3 style="font-size: 40px;">the commute<br/>was draining.</h3>
+        <svg viewBox="0 0 200 200" style="width: 100%; height: auto; margin: 12px 0;">
+          <g class="stick" stroke-width="2.5">
+            <g transform="translate(60, 100)">
+              <circle cx="0" cy="0" r="14"/>
+              <circle cx="-4" cy="2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="4" cy="2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M -5 8 Q 0 5 5 8"/>
+              <line x1="0" y1="14" x2="-3" y2="50"/>
+              <line x1="0" y1="22" x2="-12" y2="32"/>
+              <line x1="0" y1="22" x2="10" y2="35"/>
+              <line x1="-3" y1="50" x2="-15" y2="75"/>
+              <line x1="-3" y1="50" x2="8" y2="75"/>
+            </g>
+            <path d="M 90 100 L 115 100" stroke="var(--red)" stroke-width="2" fill="none"/>
+            <path d="M 115 100 L 108 96 M 115 100 L 108 104" stroke="var(--red)" stroke-width="2" fill="none"/>
+            <g transform="translate(150, 95)">
+              <circle cx="0" cy="0" r="14"/>
+              <circle cx="-4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M -5 6 Q 0 10 5 6"/>
+              <line x1="0" y1="14" x2="0" y2="55"/>
+              <line x1="0" y1="22" x2="-12" y2="28"/>
+              <line x1="0" y1="22" x2="12" y2="28"/>
+              <line x1="0" y1="55" x2="-10" y2="80"/>
+              <line x1="0" y1="55" x2="10" y2="80"/>
+            </g>
+          </g>
+        </svg>
+        <p style="font-size: 14px; line-height: 1.5;">ParSEC Whitefield opened. Now Tue–Wed–Thu from there. Closer to home. Energy preserved. Cross-location visibility as a bonus.</p>
+      </div>
+      <div style="padding: 24px; background: var(--paper); border: 2px solid var(--ink); position: relative;">
+        <div class="kicker" style="margin-bottom: 8px;">8.2 · structure</div>
+        <h3 style="font-size: 40px;">PAIR is<br/>always evolving.</h3>
+        <svg viewBox="0 0 200 200" style="width: 100%; height: auto; margin: 12px 0;">
+          <g class="stick" stroke-width="2.5">
+            <g transform="translate(60, 100)">
+              <g stroke="var(--red)" fill="none">
+                <path d="M -20 -15 Q -10 -22 0 -18"/>
+                <path d="M 18 -15 Q 22 -10 18 -2"/>
+                <path d="M 20 25 Q 10 30 0 28"/>
+              </g>
+              <circle cx="0" cy="0" r="12"/>
+              <circle cx="-4" cy="0" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="4" cy="0" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M -4 8 Q 0 5 4 8"/>
+              <line x1="0" y1="12" x2="0" y2="48"/>
+              <line x1="0" y1="20" x2="-15" y2="18"/>
+              <line x1="0" y1="20" x2="14" y2="22"/>
+              <line x1="0" y1="48" x2="-10" y2="75"/>
+              <line x1="0" y1="48" x2="10" y2="75"/>
+            </g>
+            <path d="M 90 100 L 115 100" stroke="var(--red)" stroke-width="2" fill="none"/>
+            <path d="M 115 100 L 108 96 M 115 100 L 108 104" stroke="var(--red)" stroke-width="2" fill="none"/>
+            <g transform="translate(150, 90)">
+              <circle cx="0" cy="0" r="12"/>
+              <circle cx="-4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M -4 6 Q 0 9 4 6"/>
+              <line x1="0" y1="12" x2="0" y2="50"/>
+              <line x1="0" y1="20" x2="-12" y2="22"/>
+              <line x1="0" y1="20" x2="12" y2="22"/>
+              <line x1="0" y1="50" x2="-10" y2="80"/>
+              <line x1="0" y1="50" x2="10" y2="80"/>
+              <line x1="-25" y1="82" x2="25" y2="82" stroke="var(--red)" stroke-width="2"/>
+              <line x1="-25" y1="82" x2="-22" y2="86" stroke="var(--red)"/>
+              <line x1="-15" y1="82" x2="-12" y2="86" stroke="var(--red)"/>
+              <line x1="0" y1="82" x2="3" y2="86" stroke="var(--red)"/>
+              <line x1="15" y1="82" x2="18" y2="86" stroke="var(--red)"/>
+            </g>
+          </g>
+        </svg>
+        <p style="font-size: 14px; line-height: 1.5;">Not framed as negative — it's character, accepted. Grounded my responsibilities. Built structure around assigned duties. Channels the overstep tendency rather than fighting it.</p>
+      </div>
+      <div style="padding: 24px; background: var(--paper); border: 2px solid var(--ink); position: relative;">
+        <div class="kicker" style="margin-bottom: 8px;">8.3 · channel</div>
+        <h3 style="font-size: 40px;">curiosity vs<br/>focus.</h3>
+        <svg viewBox="0 0 200 200" style="width: 100%; height: auto; margin: 12px 0;">
+          <g class="stick" stroke-width="2.5">
+            <g transform="translate(60, 100)">
+              <circle cx="0" cy="0" r="12"/>
+              <circle cx="-4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M -4 6 Q 0 9 4 6"/>
+              <line x1="0" y1="12" x2="0" y2="48"/>
+              <line x1="0" y1="20" x2="-22" y2="10"/>
+              <line x1="0" y1="20" x2="22" y2="10"/>
+              <line x1="0" y1="48" x2="-15" y2="35"/>
+              <line x1="0" y1="48" x2="15" y2="35"/>
+              <g stroke="var(--red)" fill="none">
+                <path d="M -22 10 L -32 0"/>
+                <path d="M 22 10 L 32 0"/>
+                <path d="M -15 35 L -25 45"/>
+                <path d="M 15 35 L 25 45"/>
+              </g>
+            </g>
+            <path d="M 90 100 L 115 100" stroke="var(--red)" stroke-width="2" fill="none"/>
+            <path d="M 115 100 L 108 96 M 115 100 L 108 104" stroke="var(--red)" stroke-width="2" fill="none"/>
+            <g transform="translate(150, 90)">
+              <circle cx="0" cy="0" r="12"/>
+              <circle cx="-4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <circle cx="4" cy="-2" r="1.5" fill="var(--ink)" stroke="none"/>
+              <path d="M -4 6 Q 0 9 4 6"/>
+              <line x1="0" y1="12" x2="0" y2="48"/>
+              <line x1="0" y1="20" x2="-18" y2="15"/>
+              <line x1="0" y1="20" x2="22" y2="22"/>
+              <line x1="0" y1="48" x2="-10" y2="78"/>
+              <line x1="0" y1="48" x2="10" y2="78"/>
+              <line x1="22" y1="22" x2="40" y2="20" stroke="var(--red)"/>
+              <g transform="translate(48, 30)" stroke-width="1.8">
+                <circle cx="0" cy="0" r="6"/>
+                <line x1="0" y1="6" x2="0" y2="22"/>
+                <line x1="0" y1="12" x2="-6" y2="18"/>
+                <line x1="0" y1="12" x2="6" y2="18"/>
+                <line x1="0" y1="22" x2="-5" y2="32"/>
+                <line x1="0" y1="22" x2="5" y2="32"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+        <p style="font-size: 14px; line-height: 1.5;">Default mode: "let me understand and help." Sometimes delays primary objectives. Used the tendency as a teaching channel. Demo project shipped in 2 days. Interns picked up AI agents.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============= BMSCE CASCADE ============= -->
+<section class="cascade-wrap">
+  <div class="wrap">
+    <h2 class="section-title reveal">the BMSCE cascade.<br/><span style="color: var(--red); font-size: 0.5em;">one thread. four outcomes.</span></h2>
+    <p class="section-sub reveal delay-1">a single SME-onboarding conversation became an institutional pipeline. this is what strategic value looks like when the work compounds.</p>
+    <div class="cascade reveal delay-2">
+      <div class="cascade-step">
+        <div class="cascade-stage">stage 01</div>
+        <svg viewBox="0 0 80 80">
+          <g class="stick" stroke-width="2">
+            <circle cx="40" cy="30" r="12" fill="var(--paper)"/>
+            <circle cx="36" cy="28" r="1.5" fill="var(--ink)" stroke="none"/>
+            <circle cx="44" cy="28" r="1.5" fill="var(--ink)" stroke="none"/>
+            <path d="M 36 36 Q 40 39 44 36"/>
+            <line x1="40" y1="42" x2="40" y2="70"/>
+            <line x1="40" y1="50" x2="25" y2="58"/>
+            <line x1="40" y1="50" x2="55" y2="58"/>
+          </g>
+        </svg>
+        <div class="cascade-title">SME<br/>onboarding</div>
+        <div class="cascade-body">First touch: ML SME outreach. Just a conversation.</div>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-stage">stage 02</div>
+        <svg viewBox="0 0 80 80">
+          <g class="stick" stroke-width="2">
+            <rect x="20" y="20" width="40" height="35" fill="var(--paper)"/>
+            <path d="M 18 20 L 62 20 L 58 15 L 22 15 Z"/>
+            <circle cx="40" cy="60" r="6"/>
+            <line x1="40" y1="66" x2="40" y2="74"/>
+          </g>
+        </svg>
+        <div class="cascade-title">industrial<br/>visit</div>
+        <div class="cascade-body">BMSCE CS students walk into PAIR. We curated the visit end-to-end.</div>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-stage">stage 03</div>
+        <svg viewBox="0 0 80 80">
+          <g>
+            <text x="40" y="35" font-family="Caveat" font-size="32" fill="var(--red)" text-anchor="middle" font-weight="700">★★★</text>
+            <text x="40" y="62" font-family="JetBrains Mono" font-size="8" fill="var(--ink)" text-anchor="middle">most positive</text>
+            <text x="40" y="72" font-family="JetBrains Mono" font-size="8" fill="var(--ink)" text-anchor="middle">feedback ever</text>
+          </g>
+        </svg>
+        <div class="cascade-title">institutional<br/>collaboration</div>
+        <div class="cascade-body">Most positively reviewed visit BMSCE students had given across all industrial visits.</div>
+      </div>
+      <div class="cascade-step">
+        <div class="cascade-stage">stage 04</div>
+        <svg viewBox="0 0 80 80">
+          <g class="stick" stroke-width="1.8">
+            <g transform="translate(20, 35)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="12" x2="-6" y2="18"/><line x1="0" y1="12" x2="6" y2="18"/><line x1="0" y1="20" x2="-4" y2="30"/><line x1="0" y1="20" x2="4" y2="30"/></g>
+            <g transform="translate(40, 30)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="12" x2="-6" y2="18"/><line x1="0" y1="12" x2="6" y2="18"/><line x1="0" y1="20" x2="-4" y2="30"/><line x1="0" y1="20" x2="4" y2="30"/></g>
+            <g transform="translate(60, 35)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="12" x2="-6" y2="18"/><line x1="0" y1="12" x2="6" y2="18"/><line x1="0" y1="20" x2="-4" y2="30"/><line x1="0" y1="20" x2="4" y2="30"/></g>
+          </g>
+        </svg>
+        <div class="cascade-title">ongoing<br/>student pipeline</div>
+        <div class="cascade-body">BMSCE students now visit Makerspace + office to build robotics projects. <strong>Built the Makers Platform.</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= SESSIONS ============= -->
+<section class="sessions-wrap">
+  <div class="wrap">
+    <h2 class="section-title reveal">sessions delivered.<br/><span style="color: var(--red); font-size: 0.5em;">knowledge sharing as a recurring practice.</span></h2>
+    <p class="section-sub reveal delay-1">five sessions across the period — technical, cross-domain, cultural. not one-offs; a habit.</p>
+    <div class="visits-grid reveal delay-2">
+      <div class="visit-card">
+        <div class="ribbon">07 aug 2025</div>
+        <div class="visit-name">AI for Dummies<br/>by a Dummy</div>
+        <div class="visit-take">5 PM session. Opened AI fundamentals to anyone in the office curious about it.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">21 aug 2025</div>
+        <div class="visit-name">5 PM<br/>knowledge share</div>
+        <div class="visit-take">Second 5 PM. Continued the knowledge-sharing rhythm; built it into a habit.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">19 nov 2025</div>
+        <div class="visit-name">Town Hall:<br/>fitness</div>
+        <div class="visit-take">Cross-domain. Fitness and bodybuilding — because knowledge-sharing is not bound to your strict technical lane.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">09 dec 2025</div>
+        <div class="visit-name">Tech Tuesday:<br/>Unihiker + Teensy</div>
+        <div class="visit-take">Embedded boards walkthrough. Concrete dev path used by the chatbot deployment hardware.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">18 may 2026</div>
+        <div class="visit-name">VS Code<br/>for Everything</div>
+        <div class="visit-take">Yesterday. Workflow automation, agentic patterns, the IDE as the operating layer.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= VISITS ============= -->
+<section class="visits">
+  <div class="wrap">
+    <h2 class="section-title reveal">visits.<br/><span style="color: var(--red); font-size: 0.5em;">3 of 5 were studies in R&amp;D maturity.</span></h2>
+    <p class="section-sub reveal delay-1">not just attendance. exposure to how mature research environments operate.</p>
+    <div class="visits-grid reveal delay-2">
+      <div class="visit-card">
+        <div class="ribbon">12 sep 2025</div>
+        <div class="visit-name">NCBS</div>
+        <div class="visit-take"><em>"Absolutely magnificent."</em> Exposure to a structured research institute — its scale, contribution, presence.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">20 sep 2025</div>
+        <div class="visit-name">UVS</div>
+        <div class="visit-take">Org-run event. Quality over quantity. Meaningful conversations. Network discipline learned.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">recurring</div>
+        <div class="visit-name">ParSEC<br/>Whitefield</div>
+        <div class="visit-take">Tue–Wed–Thu rotation. Ground-level visibility into the experience-centre floor feeds Vision AI design directly.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">2026</div>
+        <div class="visit-name">Electronics<br/>Expo</div>
+        <div class="visit-take"><em>"Our projects are at the same quality as theirs — better in research depth."</em> Found potential collaborators.</div>
+      </div>
+      <div class="visit-card">
+        <div class="ribbon">2026</div>
+        <div class="visit-name">Ola<br/>Factory</div>
+        <div class="visit-take">Lead-researcher conversation. Observed how enterprise R&amp;D explores structurally <em>without divergents</em>.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= MULTI-REACH ============= -->
+<section class="reach">
+  <div class="wrap">
+    <div class="reveal">
+      <h2 class="section-title">why the count<br/>understates the work.</h2>
+      <p class="section-sub">eight projects on paper — but each feeds multiple downstream requirements. read it like a fan-out.</p>
+    </div>
+    <div class="reach-list reveal delay-1">
+      <div class="reach-item">
+        <div class="reach-name">local RAG → Oki</div>
+        <div class="reach-out">12 iterations <span class="reach-arrow">+</span> Hackathon V1 (Mars-themed deployment) <span class="reach-arrow">+</span> Project Octopus Dialogue Brain <span class="reach-arrow">+</span> principles transferred to Vedanta Bharathi winning team <span class="reach-arrow">+</span> V2 in stakeholder discussion</div>
+      </div>
+      <div class="reach-item">
+        <div class="reach-name">cupcake → math in motion</div>
+        <div class="reach-out">ParSEC exhibit <span class="reach-arrow">+</span> submitted research paper <span class="reach-arrow">+</span> Universal Robotics collaboration proposal <span class="reach-arrow">+</span> cross-team build with IM Lab and Digital team <span class="reach-arrow">+</span> the cobot workaround that made real-time motion possible on the existing UR10</div>
+      </div>
+      <div class="reach-item">
+        <div class="reach-name">sketch bot</div>
+        <div class="reach-out">complete level- and project-wise Makerspace learning curriculum <span class="reach-arrow">→</span> available to every Makerspace user, every cohort</div>
+      </div>
+      <div class="reach-item">
+        <div class="reach-name">vision AI</div>
+        <div class="reach-out">3 active tangents from one base — Room AI <span class="reach-arrow">·</span> Visitor Analytics <span class="reach-arrow">·</span> Desk Tracking <span class="reach-arrow">+</span> symbiotic framework portable to any partner site without per-site infrastructure projects</div>
+      </div>
+      <div class="reach-item">
+        <div class="reach-name">makers platform</div>
+        <div class="reach-out">my proposal <span class="reach-arrow">→</span> built by BMSCE intern channel (itself a result of the BMSCE cascade) <span class="reach-arrow">→</span> platform-level enabler for student &amp; maker projects</div>
+      </div>
+      <div class="reach-item">
+        <div class="reach-name">octopus P1+P2</div>
+        <div class="reach-out">feeds the Sovereign Multimodal Human-Experience Dataset anchoring the India AI vision research direction</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= CRITERIA ============= -->
+<section class="criteria">
+  <div class="wrap">
+    <h2 class="section-title reveal">read against the<br/>appraisal criteria.</h2>
+    <p class="section-sub reveal delay-1">the three lenses your reviewers will use. how the work maps.</p>
+    <div class="crit-grid">
+      <div class="crit-card reveal">
+        <div class="kicker" style="margin-bottom: 6px;">criterion · one</div>
+        <h3>outcomes.</h3>
+        <ul>
+          <li>third-authored research paper, submitted, all 3 pipeline stages mine</li>
+          <li>Math in Motion exhibit deployed at ParSEC (14–15 Apr 2026)</li>
+          <li>Oki chatbot deployed at Journey to Mars (16 Dec 2025)</li>
+          <li>Sketch Bot translated into full Makerspace curriculum</li>
+          <li>Octopus P1 + P2 on schedule for the 30 June gate</li>
+          <li>Vedanta Bharathi 1st-place team mentored</li>
+          <li>BMSCE institutional collaboration — ongoing student presence</li>
+          <li>Nirman community — 70–100 active members</li>
+          <li>5+ knowledge-sharing sessions delivered</li>
+          <li>UR research collaboration proposal opened</li>
+        </ul>
+      </div>
+      <div class="crit-card reveal delay-1">
+        <div class="kicker" style="margin-bottom: 6px;">criterion · two</div>
+        <h3>strategic value.</h3>
+        <ul>
+          <li><strong>proposed</strong> the 3-tangent split of Vision AI — architectural call</li>
+          <li><strong>advancing</strong> the symbiotic framework approach — vision AI built to fit existing infrastructure (in planning)</li>
+          <li>real-time cobot workaround on the existing UR10 (UR said it needed newer model)</li>
+          <li>BMSCE cascade — one thread, sustained institutional outcome</li>
+          <li>cross-location presence at ParSEC Whitefield (Tue–Thu)</li>
+          <li>AI-agent adoption pathway demonstrated for interns</li>
+          <li>cultural ambassadorship at Journey to Mars → Nirman</li>
+          <li>Makers Platform instigated; built via BMSCE intern channel</li>
+          <li>camera infra gap flagged → cross-team upgrade decision</li>
+        </ul>
+      </div>
+      <div class="crit-card reveal delay-2">
+        <div class="kicker" style="margin-bottom: 6px;">criterion · three</div>
+        <h3>growth.</h3>
+        <ul>
+          <li><em>technical:</em> LLMs, RAG, CUDA, FastAPI, Git, Polyscope, URScript, RTDE, MoveJ, IK, linear algebra, RoboDK, Ubuntu, YOLO, ByteTrack, BoT-SORT, Codex + Claude agents, Google Live API, Unihiker, Teensy 4.1</li>
+          <li><em>process:</em> Agile (proposed &amp; implemented), systems-thinking, symbiotic-design</li>
+          <li><em>soft:</em> Nirman (70–100), mentorship at scale (15+), public speaking, cross-domain knowledge sharing</li>
+          <li><em>character:</em> self-management (commute → Whitefield), responsibility-grounding under change, converting curiosity into structured mentorship</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= FUTURE PROSPECTS ============= -->
+<section class="future">
+  <div class="wrap">
+    <h2 class="section-title reveal">what's next.<br/><span style="color: var(--red); font-size: 0.5em;">threaded with the character work.</span></h2>
+    <p class="section-sub reveal delay-1">six-month horizon. each item continues the arc — not just a deliverable, a continuation of how I grew.</p>
+    <div class="future-list">
+      <div class="future-item reveal">
+        <div class="future-num">01</div>
+        <div>
+          <div class="future-title">Octopus P1 + P2 through the 30 June gate.</div>
+          <div class="future-body">100 clean joinable visitor sessions. The proof point that the assigned scope ships on time.</div>
+        </div>
+        <div class="future-thread">tests the <strong>grounded-responsibility structure</strong> from ch. 8.2 against rising scope.</div>
+      </div>
+      <div class="future-item reveal delay-1">
+        <div class="future-num">02</div>
+        <div>
+          <div class="future-title">Vision AI — close the research phase.</div>
+          <div class="future-body">Push tracking + Re-ID past target accuracy. Scale single-camera → multi-camera. Ship the symbiotic framework as the portable artefact.</div>
+        </div>
+        <div class="future-thread">this <em>is</em> the <strong>messy middle</strong> — trust here is what I'm asking for.</div>
+      </div>
+      <div class="future-item reveal delay-2">
+        <div class="future-num">03</div>
+        <div>
+          <div class="future-title">Oki V2 — token-optimised, data-driven.</div>
+          <div class="future-body">Convert V1 trial-run learnings into a measurable production version. Layer in the classification pipelines.</div>
+        </div>
+        <div class="future-thread">closes the loop from <strong>local RAG → V2 data-driven</strong>.</div>
+      </div>
+      <div class="future-item reveal delay-3">
+        <div class="future-num">04</div>
+        <div>
+          <div class="future-title">Math in Motion — paper result.</div>
+          <div class="future-body">Conference outcome announced 29 May. Whatever the result, the paper exists, the exhibit is live, the pipeline is open source.</div>
+        </div>
+        <div class="future-thread">closes the loop on the <strong>out-of-domain learning bet</strong>.</div>
+      </div>
+      <div class="future-item reveal">
+        <div class="future-num">05</div>
+        <div>
+          <div class="future-title">Sustained mentorship + Nirman.</div>
+          <div class="future-body">Keep the 70–100 community active. Keep onboarding interns into AI-agent fluency. Keep the BMSCE channel producing project work.</div>
+        </div>
+        <div class="future-thread">the <strong>drawback</strong> from ch. 8.3 channelled into ongoing value.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============= THE ASK ============= -->
+<section class="ask">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="ask-mark">"</div>
+      <h2>trust in the<br/><span class="scribble">messy middle</span><br/>of exploratory work.</h2>
+      <p><em>Not a designation change. Not compensation. Not budget.</em></p>
+      <p>Permission and space to admit when there isn't full clarity — and still attempt to find something of relevance. Vision AI at 46%. PAIR's continuous evolution accepted as character. Math in Motion as an out-of-domain bet where clarity was not there at the start. The symbiotic framework designed to work <em>with</em> ambiguity rather than impose on it.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>RAJATH SINGH R · PAIR · 07.07.2025 → 19.05.2026</div>
+  <div>~ 10.5 months · annotated</div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ---------- PAGE FLIP ----------
+(function() {
+  const flipTargets = document.querySelectorAll(
+    'main > section, main > .wrap > section.chapter, main > .wrap > .divider, main > .wrap > .closed-wrap'
+  );
+
+  flipTargets.forEach(el => el.classList.add('flip-page'));
+
+  // Synchronous in-view check at page load — avoids the initial flash
+  const vh = window.innerHeight;
+  flipTargets.forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.top < vh * 0.9 && r.bottom > 0) {
+      el.classList.add('is-flipped');
+    }
+  });
+
+  const flipIO = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-flipped');
+        flipIO.unobserve(e.target);
+      }
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -80px 0px'
+  });
+
+  flipTargets.forEach(el => {
+    if (!el.classList.contains('is-flipped')) {
+      flipIO.observe(el);
+    }
+  });
+})();
+</script>
+</body>
+</html>
